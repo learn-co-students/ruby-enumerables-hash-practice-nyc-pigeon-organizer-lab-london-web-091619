@@ -42,23 +42,23 @@ describe "NYC Pigeon Organizer" do
 
     context "Pigeons" do
 
-      context "Theo" do
-        before(:all) do
-          @theo = @result["Theo"]
-        end
-        it "knows Theo is purple and grey" do
-          expect(@theo[:color].length).to eq(2)
-          ["purple", "grey"].each { |c| expect(@theo[:color]).to include(c) }
-        end
-        it "knows Theo is male" do
-          expect(@theo[:gender].length).to eq(1)
-          expect(@theo[:gender]).to include("male")
-        end
-        it "knows Theo lives on the subway" do
-          expect(@theo[:lives].length).to eq(1)
-          expect(@theo[:lives]).to include("Subway")
-        end
-      end
+       context "Theo" do
+         before(:all) do
+           @theo = @result["Theo"]
+         end
+         it "knows Theo is purple and grey" do
+           expect(@theo[:color].length).to eq(2)
+           ["purple", "grey"].each { |c| expect(@theo[:color]).to include(c) }
+         end
+         it "knows Theo is male" do
+           expect(@theo[:gender].length).to eq(1)
+           expect(@theo[:gender]).to include("male")
+         end
+         it "knows Theo lives on the subway" do
+           expect(@theo[:lives].length).to eq(1)
+           expect(@theo[:lives]).to include("Subway")
+         end
+       end
 
       context "Peter Jr." do
         before(:all) do
@@ -224,6 +224,6 @@ describe "NYC Pigeon Organizer" do
           expect(@lola[:lives]).to include("Central Park")
         end
       end
-    end
+    end  
   end # method
 end # suite
